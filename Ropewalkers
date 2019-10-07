@@ -1,0 +1,25 @@
+#include <iostream>
+#include <iomanip>
+#include <algorithm>
+#include <vector>
+#include <cmath>
+using namespace std;
+ 
+int main()
+{
+    int a , b ,c ,d,s=0;
+    cin>>a>>b>>c>>d;
+    int vc [3];
+    vc[0]=a;
+    vc[1]=b;
+    vc[2]=c;
+    
+    sort(vc , vc+3);
+ 
+    if(vc[1]-vc[0]<d)
+        s+=(vc[1]-vc[0])-d;
+    if(vc[2]-vc[1]<d)
+    s+=(vc[2]-vc[1])-d;
+ 
+    cout<<-(s);
+}
